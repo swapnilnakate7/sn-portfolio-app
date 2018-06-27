@@ -1,9 +1,9 @@
  <header>
     <mat-toolbar color="primary">
         <mat-toolbar-row>
-          <span>{{title}}</span>
+          <span routerLink="/">{{title}}</span>
           <span class="example-spacer"></span> 
-          <button mat-button class="menu-btn" *ngFor="let menu of headerMenu" [routerLink]="menu.link" >{{menu.title}}</button>
+          <button mat-button class="menu-btn" *ngFor="let menu of headerMenu" routerLinkActive="active" routerLink="{{menu.link}}" >{{menu.title}}</button>
       
         </mat-toolbar-row>
       </mat-toolbar>
