@@ -18,4 +18,4 @@ import {MatTabsModule} from '@angular/material/tabs';
       MatCardModule,MatGridListModule,
       MatIconModule]
 })
-export class MaterialModule { }
+export class SnMaterialModule { }
