@@ -1,4 +1,4 @@
-[{
+{{
     "title":"myProject 1",
     "tech":["java","angular"]
 },{
@@ -13,4 +13,4 @@
 },{
     "title":"myProject 5",
     "tech":["java","angular"]
-}]
+}}
