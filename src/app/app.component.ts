@@ -1,16 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material';
+import { PortfolioServcie } from './shared/services/portfolio.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app';
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+
+  ngOnInit(){
+    this.portfolioService.getProjects()
+    .subscribe(data=>{
+      this.portfolioService.projects = data;
+    });
+  }
+
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, 
+    private portfolioService:PortfolioServcie) {
     iconRegistry.addSvgIcon(
         'thumbs-up',
         sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));

@@ -1,0 +1,19 @@
+<mat-card class="project-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="project-header-image"></div>
+          <mat-card-title >{{project.title | titlecase}}</mat-card-title>
+          <mat-card-subtitle>project subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <img class="project-image" (click)="navigate(project)"  mat-card-image src="assets/img/coding-thumb.jpg" 
+        alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{project.technologies}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions >
+                <mat-icon class="action-icon" [ngClass]="{'liked':project.liked}" (click)="like(project)">favorite</mat-icon>
+                <mat-icon class="action-icon" >share</mat-icon>
+         
+        </mat-card-actions>
+      </mat-card>

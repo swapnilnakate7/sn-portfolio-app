@@ -1,4 +1,4 @@
-class Project {
+export interface IProjects{
     title:string;
     technologies:Array<string>;
     links:{};

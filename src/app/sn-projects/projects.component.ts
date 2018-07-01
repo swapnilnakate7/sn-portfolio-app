@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { PortfolioServcie } from '../shared/services/portfolio.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector:'sn-projects',
@@ -9,25 +10,32 @@ import { PortfolioServcie } from '../shared/services/portfolio.service';
 
 export class SnProjects implements OnInit{
     title='Projects loaded';
-    projects:any=[];
+    projects:Project[]=[];
+
+
 
     ngOnInit(){
         this.fetchProjects();
+        if(!this.projects){
+            this.ps.getProjects()
+            .subscribe(projects=>{
+             this.projects = this.ps.projects =projects;
+            });
+        }
     }
     
-    constructor(private ps:PortfolioServcie){}
+    constructor(private ps:PortfolioServcie, private router:Router){}
     
     fetchProjects(){
-        this.ps.getProjects()
-        .subscribe(data => {
-            this.projects = data;
-            console.log(data);
-        })
-
-        
-        
+      this.projects = this.ps.projects;
+         
     }
 
+   
+    
+    navigateToProject(id){
+        //this.router.navigate(['/projects',id]);
+    }
     
 
 }

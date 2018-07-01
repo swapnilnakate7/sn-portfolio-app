@@ -1,16 +1,26 @@
 [{
     "title":"myProject 1",
-    "tech":["java","angular"]
+    "technologies":["java","angular"],
+    "liked":false,
+    "links":{}
 },{
     "title":"myProject 2",
-    "tech":["java","angular"]
+    "technologies":["java","angular"],
+    "liked":false,
+    "links":{}
 },{
     "title":"myProject 3",
-    "tech":["java","angular"]
+    "technologies":["java","angular"],
+    "liked":false,
+    "links":{}
 },{
     "title":"myProject 4",
-    "tech":["java","angular"]
+    "technologies":["java","angular"],
+    "liked":false,
+    "links":{}
 },{
     "title":"myProject 5",
-    "tech":["java","angular"]
+    "technologies":["java","angular"],
+    "liked":false,
+    "links":{}
 }]

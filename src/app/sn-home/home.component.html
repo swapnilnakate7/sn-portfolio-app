@@ -1,1 +1,46 @@
   <mat-card class="header-avtar"></mat-card>
+  
+  <mat-grid-list  class="sn-social-links" cols="4" rowHeight="1:0.2">
+        <mat-grid-tile ><button mat-button color="primary"><i class="fas fa-mobile fa-lg"></i></button></mat-grid-tile>
+        <mat-grid-tile ><button mat-button color="primary"><i class="fab fa-facebook-f fa-lg"></i></button> </mat-grid-tile>
+        <mat-grid-tile ><button mat-button color="primary"><i class="fab fa-google fa-lg"></i> </button> </mat-grid-tile>
+        <mat-grid-tile ><button mat-button color="primary"><i class="fab fa-github fa-lg"></i> </button> </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-tab-group>
+      <mat-tab > 
+          <ng-template mat-tab-label>
+              <mat-icon color="primary">autorenew</mat-icon>
+              <span>updates</span>
+           
+            </ng-template>
+        <mat-list role="list">
+            <mat-list-item role="listitem">Portfolio website - in-progress<mat-icon color="warn">priority_high</mat-icon></mat-list-item>
+            <mat-list-item role="listitem">Business App [Angular] - working<mat-icon color="primary">check</mat-icon></mat-list-item>
+           
+          </mat-list>
+      
+      </mat-tab>
+      <mat-tab label="free stuff">  check later </mat-tab>
+      <mat-tab >
+        
+          <ng-template mat-tab-label> 
+              <mat-icon color="primary">settings_system_daydream</mat-icon>
+                apis
+          </ng-template>
+
+        <mat-list role="list">
+
+      
+          <mat-list-item role="listitem" (click)="openDialog()">GST api  - in-progress<mat-icon color="warn">priority_high</mat-icon></mat-list-item>
+       
+        </mat-list> </mat-tab>
+      <mat-tab > 
+        <ng-template  mat-tab-label>
+          <mat-icon color="primary">desktop_windows</mat-icon>
+             front-end
+        </ng-template>
+        
+        
+        check later </mat-tab>
+    </mat-tab-group>

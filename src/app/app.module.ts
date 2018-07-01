@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {SnMaterialModule} from './material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Route, Routes} from '@angular/router';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +15,9 @@ import { SnProjects } from './sn-projects/projects.component';
 import { SnHome } from './sn-home/home.component';
 import { SnError } from './sn-error/error.component';
 import { PortfolioServcie } from './shared/services/portfolio.service';
+import { SnProject } from './sn-projects/sn-project/project.component';
+import { SnProjectDetail } from './sn-projects/sn-project-detail/project-detail.component';
+import {DialogContentExampleDialog} from './sn-home/dialogue.component';
 
 
 
@@ -25,14 +28,21 @@ import { PortfolioServcie } from './shared/services/portfolio.service';
     SnFooter,
     SnHome,
     SnError,
-    SnProjects
+    SnProjects,
+    SnProject,
+    SnProjectDetail,
+    DialogContentExampleDialog
   ],
   imports: [
     BrowserModule,
     SnMaterialModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule
+    
   ],
+  entryComponents:[DialogContentExampleDialog],
   providers: [PortfolioServcie],
   bootstrap: [AppComponent]
 })
