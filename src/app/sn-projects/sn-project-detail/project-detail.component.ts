@@ -9,12 +9,27 @@ import { PortfolioServcie } from "../../shared/services/portfolio.service";
 })
 export class SnProjectDetail implements OnInit{
     project:Project;
-
+    id:string;
     ngOnInit(){
-     var id = this.route.snapshot.paramMap.get('id');
-     this.project = this.projectService.projects[id];
-    }
+     this.id = this.route.snapshot.paramMap.get('id');
+     if(!this.portfolioService.projects){
+        this.portfolioService.getProjects().subscribe(projects =>{
+            this.portfolioService.projects = projects;
+            this.project = this.portfolioService.projects[this.id];
+        })
+      
+     }else{
+         
+     this.project = this.portfolioService.projects[this.id];
 
-    constructor(private route:ActivatedRoute, private projectService:PortfolioServcie){}
+     }
+     
+    }
+    
+
+    constructor(private route:ActivatedRoute, private portfolioService:PortfolioServcie){
+      
+        
+    }
 
 }

@@ -1,1 +1,11 @@
-{{project.title}}
+<div *ngIf="project">
+<h1>
+    {{project.title}}
+</h1>
+<section style="margin: 0 auto;">
+    
+            <mat-chip-list >
+               <mat-chip color="primary" *ngFor="let tech of project.technologies" selected> {{tech}}</mat-chip>
+           </mat-chip-list>
+    
+</section></div>

@@ -17,12 +17,9 @@ export class SnProject implements OnInit{
 
     ngOnInit(){
         this.projects = this.portfolioService.projects;
-        if(!this.project){
-            console.log('as',this.portfolioService.projects);
-              
+        if(!this.project){     
             var i = this.route.snapshot.paramMap.get('id');
                 this.project=this.portfolioService.projects[i];
-
         }
     } 
 

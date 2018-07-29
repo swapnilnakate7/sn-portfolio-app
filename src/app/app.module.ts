@@ -18,6 +18,7 @@ import { PortfolioServcie } from './shared/services/portfolio.service';
 import { SnProject } from './sn-projects/sn-project/project.component';
 import { SnProjectDetail } from './sn-projects/sn-project-detail/project-detail.component';
 import {DialogContentExampleDialog} from './sn-home/dialogue.component';
+import {SearchFilter} from './filters/sn-search-filter.pipe';
 
 
 
@@ -31,7 +32,8 @@ import {DialogContentExampleDialog} from './sn-home/dialogue.component';
     SnProjects,
     SnProject,
     SnProjectDetail,
-    DialogContentExampleDialog
+    DialogContentExampleDialog,
+    SearchFilter
   ],
   imports: [
     BrowserModule,
